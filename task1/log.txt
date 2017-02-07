@@ -1,0 +1,12 @@
+commit 079bf7da48278aa7a75895e653bb31a6a482e42f
+Author: Vadim <vadimshipko@gmail.com>
+Date:   Tue Feb 7 12:30:08 2017 +0300
+
+    Добавил второй статус в status.txt
+
+commit 44f3ccd0aaebf595cebaf09b1f720a8c5f1157f8
+Author: Vadim <vadimshipko@gmail.com>
+Date:   Tue Feb 7 12:21:34 2017 +0300
+
+    add .gitignore
+
