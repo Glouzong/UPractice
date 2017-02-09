@@ -12,3 +12,7 @@
 
 нет изменений добавленных для коммита
 
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+nothing to commit, working tree clean
+
