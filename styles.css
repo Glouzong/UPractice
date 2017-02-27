@@ -1,0 +1,123 @@
+table.toppannel {
+    overflow: hidden;
+    color: #3c85f0;
+    margin: -10px;
+    margin-right:-14px;
+    margin-bottom: 10px;
+    background-color: #36383c;
+    border: 3px black solid;
+    border-radius: 0 0 0 20px;
+    height: 75px;
+    width:102.5%;
+}
+div.head{
+    text-align:center;
+    color: #3c85f0;
+    font-size:40px;
+    padding: 7px;
+    height: 60px;
+    width: 100px;
+    margin: -5px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+button.buttonpannel{
+    text-align: center;
+    color: #3c85f0;
+    font-size:15px;
+    padding: 5px;
+    height: 65px;
+    width: 150px;
+    background-color: #131519;
+    border: 3px #000000 solid;
+    border-radius: 20px;
+}
+div.name{
+    text-align:center;
+    color: #3c85f0;
+    font-size:15px;
+    padding: 7px;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    margin-right: 20px;
+}
+div.avatar{
+    text-align:center;
+    color: rgba(60, 133, 240, 0.67);
+    font-size:15px;
+    padding: 5px;
+    height: 55px;
+    width: 65px;
+    margin-right: 10px;
+    background-color: #131519;
+    border: 3px #000000 solid;
+    border-radius: 20px;
+    position: relative;
+    left: 10px;
+}
+div.news{
+display: inline-block;
+    width: 40%;
+    height: 200px;
+    margin: 10px;
+    background-color: rgba(251, 251, 255, 0.66);
+    border: 3px #000000 solid;
+    border-radius: 20px;
+}
+div.head2{
+    text-align:center;
+    color: #020407;
+    font-size:24px;
+    background-color: rgba(2, 4, 7, 0.29);
+    padding: 7px;
+    border-radius: 15px 15px 0 0;
+}
+div.text{
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    object-fit: cover;
+    height: 40%;
+}
+/*
+button.adddnews{
+    background-color: #36383c;
+}
+div.box{
+    white-space:nowrap;
+    padding: 3px;
+}
+div.box div1{
+    display:inline-block;
+    background-color: rgba(34, 35, 36, 0.8);
+    color: #3c85f0;
+    padding: 5px;
+    text-transform: capitalize;
+    border: 3px black solid;
+    border-radius: 10px;
+    min-height: 20px;
+    max-height: 50px;
+}
+div.box div2{
+    display:inline-block;
+    background-color: rgba(34, 35, 36, 0.91);
+    color: #3c85f0;
+    padding: 5px;
+    right: 0;
+    margin-right: 50px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    width: 8em;
+    max-width: 100%;
+    border: 1px solid orange;
+    background: #fff5d7;
+ }*/
+/*
+<div class="toppannel">
+    <div style="width: 1000%;">
+        <div class= ="head">
+            <h1>News</h1>
+        </div>
+    </div>
+</div>*/
