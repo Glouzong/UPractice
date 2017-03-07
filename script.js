@@ -78,7 +78,8 @@ var articles = [
         content: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will " +
         "give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. " +
         "No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. "
-    },{
+    },
+    {
         id: '8',
         title: 'Минское «Динамо» обыграло ярославский «Локомотив»',
         summary: 'Минское «Динамо» обыграло ярославский «Локомотив» в четвертом матче первого раунда плей-офф КХЛ — 4:2',
@@ -157,7 +158,8 @@ var articles = [
         content: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will " +
         "give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. " +
         "No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. "
-    },{
+    },
+    {
         id: '15',
         title: 'Минское «Динамо» обыграло ярославский «Локомотив»',
         summary: 'Минское «Динамо» обыграло ярославский «Локомотив» в четвертом матче первого раунда плей-офф КХЛ — 4:2',
@@ -234,11 +236,9 @@ function compareDate(a,b) {
     }
 }
 function getArticles(skip, top, articles){
-    skip = skip || 0;
-    top = top || 5;
     var result= articles;
     result.sort(compareDate);
-    result = result.slice(skip, skip + top);
+    result = result.slice(skip, top);
     return result;
 }
 
@@ -251,9 +251,22 @@ function getArticle(articleId, articles){
     return null;
 }
 
-function validateArticle(article){
-    if (article.id != undefined && article.title.length > 0 && article.title.length < 100 &&
-        article.summary.length > 0 && article.summary.length < 400 &&
+function validateId(id, articles) {
+    var temp = 0;
+    for(var i = 0; i < articles.length; ++i){
+        if(articles[i].id == id) {
+            temp++;
+        }
+    }
+    if(temp > 1){
+        return false;
+    }else{
+        return true;
+    }
+}
+function validateArticle(article,articles){
+    if (validateId(article.id, articles) && article.title.length > 0 && article.title.length < 100 &&
+        article.summary.length > 0 && article.summary.length < 200 &&
         article.createdAt != undefined && article.author.length > 0 && article.content.length > 0) {
         return true;
     } else {
@@ -262,7 +275,7 @@ function validateArticle(article){
 }
 
 function addArticle(articles,newArticle){
-    if (validateArticle(newArticle)) {
+    if (validateArticle(newArticle,articles)) {
         articles.push(newArticle);
         return true;
     } else {
@@ -271,13 +284,17 @@ function addArticle(articles,newArticle){
 }
 
 function editArticle(id, newArticle, articles){
-    if (validateArticle(newArticle)) {
-        var oldArticle = getArticle(id, articles);
-        oldArticle.createdAt = newArticle.createdAt;
-        oldArticle.author = newArticle.author;
-        oldArticle.title = newArticle.title;
-        oldArticle.summary = newArticle.summary;
-        oldArticle.content = newArticle.content;
+    var oldArtile = getArticle(id,articles);
+    if(validateId(id,articles)){
+        if(newArticle.title.length > 0 && newArticle.title.length < 100){
+            oldArtile.title = newArticle.title;
+        }
+        if(newArticle.summary.length > 0 && newArticle.summary.length < 200){
+            oldArtile.summary = newArticle.summary;
+        }
+        if(newArticle.content.length > 0){
+            oldArtile.content = newArticle.content;
+        }
         return true;
     } else {
         return false;
@@ -288,16 +305,16 @@ function editArticle(id, newArticle, articles){
 function removeArticle(articleId, articles){
     for (var i = 0; i < articles.length; ++i){
         if (articles[i].id == articleId) {
-            articles.splice(i, i + 1);
-            break;
+            articles.splice(i,1);
+            return true;
         }
     }
+    return false;
 }
 
-console.log(articles);
-console.log(getArticle(0,5, articles));
+console.log(articles.length);
+console.log(getArticles(5,10, articles));
 console.log(getArticle(3, articles));
-console.log(articles);
 console.log(addArticle(articles,{
     id: '21',
     title: 'Минское «Динамо» обыграло ярославский «Локомотив»',
@@ -305,8 +322,11 @@ console.log(addArticle(articles,{
     createdAt: new Date('2013-02-27T23:00:00'),
     author: 'Иванов Иван',
     content: 'Гости создали больше опасных моментов и в два раза перебросали минчан, но «зубры» на этот раз очень эффективно использовали свои моменты.'
-}))
-
+}));
+console.log(validateArticle(getArticle(21,articles),articles));
+console.log(articles.length);
 console.log(removeArticle(3, articles));
+console.log(articles.length);
 console.log(editArticle("5",{title: "new title", summary: "new summary", content: "new content"},articles));
+console.log(articles);
 
