@@ -1,18 +1,36 @@
 div.toppannel {
     display: inline-block;
-    overflow: hidden;
     color: #3c85f0;
-    margin: -10px;
-    margin-right:-14px;
+    margin:-10px;
+    margin-left: 0px;
     margin-bottom: 10px;
+    margin-top: -25px;
+    text-align: center;
     background-color: #36383c;
     border: 3px black solid;
+    min-width: 650px;
     border-radius: 0 0 0 20px;
     height: 65px;
-    width:100.7%;
+    width:100%;
+}
+div.righpannel{
+    display: inline-block;
+    color: #3c85f0;
+    text-align: center;
+    background-color: #36383c;
+    border: 1px black solid;
+    border-radius: 0 0 0 100px;
+    height: 500px;
+    margin: -10px;
+    margin-left: 1px;
+    margin-right: -5px;
+    min-width: 80px;
+    width: 80px;
+    float: right;
 }
 div.head{
     display: inline-block;
+    float: left;
     text-align:center;
     color: #3c85f0;
     font-size:40px;
@@ -20,18 +38,20 @@ div.head{
     height: 60px;
     width: 100px;
     margin: -5px;
-    margin-right: 100px;
+    margin-right: 20px;
     margin-left: 10px;
 }
 button.buttonpannel{
+    overflow: hidden;
     display: inline-block;
     text-align: center;
     color: #3c85f0;
     font-size:15px;
-    padding: 5px;
+    padding: 3px;
     height: 65px;
-    width: 150px;
-    margin-top: -5px;
+    width: 140px;
+    margin-left: -2px;
+    margin-right: -2px;
     background-color: #131519;
     border: 3px #000000 solid;
     border-radius: 20px;
@@ -42,11 +62,11 @@ div.name{
     color: #3c85f0;
     font-size:15px;
     padding: 7px;
-    width: 100px;
+    width: 80px;
     height: 35px;
-    margin: 10px;
-    margin-right: 20px;
+    margin: 20px;
     float: right;
+    font-weight: bold;
 }
 div.avatar{
     display: inline-block;
@@ -54,7 +74,7 @@ div.avatar{
     color: rgba(60, 133, 240, 0.67);
     font-size:15px;
     padding: 5px;
-    height: 55px;
+    height: 50px;
     width: 65px;
     margin-right: 10px;
     background-color: #131519;
@@ -67,12 +87,14 @@ div.avatar{
 div.news{
     overflow: hidden;
     display: inline-block;
-    width: 45%;
+    width: 20%;
     height: 200px;
-    margin: 5px;
+    margin: 1px;
     background-color: rgba(251, 251, 255, 0.66);
     border: 3px #000000 solid;
     border-radius: 20px;
+    min-width: 280px;
+    max-width: 400px;
 }
 div.head2{
     text-align:center;
@@ -81,16 +103,40 @@ div.head2{
     font-weight: bold;
     background-color: rgba(2, 4, 7, 0.29);
     padding: 7px;
+    width: 100%;
+    display: inline-block;
     border-radius: 15px 15px 0 0;
+}
+div.data{
+    display: inline-block;
+    float: right;
+    text-align:center;
+    padding: 1px;
 }
 div.text{
     margin: 5px;
+    margin-bottom: 2px;
     text-align: center;
     font-size: 14px;
     object-fit: cover;
     height: 60%;
+    width: 60%;
     overflow: hidden;
+    float: left;
 }
+img.news{
+    display: inline-block;
+    overflow: hidden;
+    width: 34%;
+    height: 50%;
+    border: 3px #000000 solid;
+    border-radius:  0 0 0 15px;
+    max-width: 34%;
+    max-height: 50%;
+    float: right;
+    position: relative;
+}
+
 div.autor{
     display: inline-block;
     margin: 5px;
@@ -123,4 +169,6 @@ footer.downpannel{
     margin-left: -5px;
     margin-bottom: -12px;
     font-weight: bold;
+    min-width: 650px;
+
 }
