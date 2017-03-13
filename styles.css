@@ -1,32 +1,18 @@
-div.toppannel {
+/*Верхняя панель*/
+div.top-pannel {
     display: inline-block;
     color: #3c85f0;
     margin:-10px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 10px;
-    margin-top: -25px;
+    margin-top: -10px;
     text-align: center;
     background-color: #36383c;
-    border: 3px black solid;
+    border: 3px #000000 solid;
     min-width: 650px;
     border-radius: 0 0 0 20px;
     height: 65px;
     width:100%;
-}
-div.righpannel{
-    display: inline-block;
-    color: #3c85f0;
-    text-align: center;
-    background-color: #36383c;
-    border: 1px black solid;
-    border-radius: 0 0 0 100px;
-    height: 500px;
-    margin: -10px;
-    margin-left: 1px;
-    margin-right: -5px;
-    min-width: 80px;
-    width: 80px;
-    float: right;
 }
 div.head{
     display: inline-block;
@@ -41,7 +27,7 @@ div.head{
     margin-right: 20px;
     margin-left: 10px;
 }
-button.buttonpannel{
+button.button-pannel{
     overflow: hidden;
     display: inline-block;
     text-align: center;
@@ -70,9 +56,9 @@ div.name{
 }
 div.avatar{
     display: inline-block;
-    text-align:center;
+    text-align: center;
     color: rgba(60, 133, 240, 0.67);
-    font-size:15px;
+    font-size: 15px;
     padding: 5px;
     height: 50px;
     width: 65px;
@@ -84,28 +70,45 @@ div.avatar{
     left: 10px;
     float: right;
 }
+/*боковая панель*/
+div.righ-pannel{
+    display: inline-block;
+    color: #3c85f0;
+    text-align: center;
+    background-color: #36383c;
+    border: 1px #000000 solid;
+    border-radius: 0 0 0 100px;
+    height: 500px;
+    margin: -10px;
+    margin-left: 1px;
+    margin-right: -5px;
+    min-width: 80px;
+    width: 80px;
+    float: right;
+}
+/*новость*/
 div.news{
     overflow: hidden;
     display: inline-block;
-    width: 20%;
-    height: 200px;
+    width: 450px;
+    height: 370px;
     margin: 1px;
     background-color: rgba(251, 251, 255, 0.66);
     border: 3px #000000 solid;
-    border-radius: 20px;
-    min-width: 280px;
-    max-width: 400px;
+    border-radius: 22px;
+    min-width: 450px;
+    max-width: 450px;
 }
 div.head2{
     text-align:center;
     color: #020407;
-    font-size:24px;
+    font-size:20px;
     font-weight: bold;
     background-color: rgba(2, 4, 7, 0.29);
     padding: 7px;
     width: 100%;
     display: inline-block;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 div.data{
     display: inline-block;
@@ -119,25 +122,25 @@ div.text{
     text-align: center;
     font-size: 14px;
     object-fit: cover;
-    height: 60%;
+    width: 280px;
+    min-height: 100%;
     width: 60%;
     overflow: hidden;
     float: left;
 }
-img.news{
+img.img-news{
     display: inline-block;
     overflow: hidden;
-    width: 34%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
     border: 3px #000000 solid;
     border-radius:  0 0 0 15px;
-    max-width: 34%;
-    max-height: 50%;
+    max-width: 150px;
+    max-height: 150px;
     float: right;
     position: relative;
 }
-
-div.autor{
+div.author{
     display: inline-block;
     margin: 5px;
     font-size: 16px;
@@ -145,23 +148,49 @@ div.autor{
     font-style: italic;
     float: right;
 }
-button.showfull{
+button.show-full{
     display: inline-block;
     text-align: center;
     color: #3c85f0;
-    font-size:15px;
+    font-size: 14px;
     padding: 5px;
+    width: 30%;
     background-color: #131519;
     border: 3px #000000 solid;
-    border-radius:  0 15px 0 15px;
-    float:left;
+    border-radius:  15px 0 0 0;
+    float:right;
 }
-footer.downpannel{
+button.edit-news{
+    display: inline-block;
+    text-align: center;
+    color: #3c85f0;
+    font-size: 14px;
+    padding: 5px;
+    width: 30%;
+    background-color: #131519;
+    border: 3px #000000 solid;
+    border-radius:  0 0 0 0;
+    float:right;
+}
+button.delete{
+      display: inline-block;
+      text-align: center;
+      color: #3c85f0;
+      font-size: 14px;
+      padding: 5px;
+      width: 30%;
+      background-color: #131519;
+      border: 3px #000000 solid;
+      border-radius:  0 0 0 15px;
+      float:right;
+}
+/*нижняя панель*/
+footer.down-pannel{
     display: inline-block;
     overflow: hidden;
     color: #3c85f0;
     background-color: rgba(54, 56, 60, 0.71);
-    border: 3px black solid;
+    border: 3px #000000 solid;
     border-radius: 0 20px 0 0;
     height: 20px;
     width:100%;
