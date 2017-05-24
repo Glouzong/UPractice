@@ -6,39 +6,58 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body bgcolor="#2349c5">
-    <div class="top-pannel">
-        <div class="head">News</div>
-        <button class="button-pannel" onclick="sortArticles">Добавить новость</button>
-        <button class="button-pannel">
-            Сортировать
-        </button>
-        <div class="avatar">
-            <img scr="images/ava.jpg" alt="Аватарка">
-        </div>
-        <div class="name">NICKNAME</div>
+<header class="top-pannel">
+    <div class="head">News</div>
+    <button class="button-pannel" onclick="showNewsModel.addNews()">Добавить новость</button>
+    <div class="avatar">
+        <img scr="images/ava.jpg" alt="Аватарка">
     </div>
-    <div class="righ-pannel">Панелька с тегами</div>
+    <button class="login" onclick="loginModule.checkNickname()">Войти</button>
+    <div class="authorization" style="border-radius: 0 20px 20px 0;">
+        Логин
+        <input class="in-login" title="login" alt="login">
+    </div>
+    <div class="authorization" style="border-radius: 20px 0 0 20px;">
+        Пароль
+        <input class="password" title="password" alt="password">
+    </div>
+    <div class="name"></div>
+</header>
+
+<div class="add-news" style="display: none;">
+    <textarea class="name-news" title="Имя новости">Имя новости</textarea>
+    <textarea class="short-news" title="Короткая новость">Короткая новость</textarea>
+    <textarea class="long-news" title="Длинная новость">Длинная новость</textarea>
+</div>
+
+
+<template class='news-module'>
     <div class="news">
         <div class="head2">Название новости</div>
         <div class="text">Текст</div>
         <div class="data"> 02.12.2012</div>
-        <img  class="img-news" src="images/news.jpg"  alt="news">
         <div class="author">Author</div>
-        <button class="show-full">Показать полностью</button>
-        <button class="edit-news">Редактировать</button>
-        <button class="delete">Удаление</button>
+        <div class="down-news">
+            <button class="show-full">Показать полностью</button>
+            <button class="edit-news">Редактировать</button>
+            <button class="delete">Удаление</button>
+        </div>
     </div>
-    <footer class="down-pannel">
-        <div style="float: left; display: inline-block;margin-left: 20px">
-            vadimshipko@gmail.com
-        </div>
-        <div style="display: inline-block">
-            News
-        </div>
-        <div style="float: right; display: inline-block;margin-right: 20px">
-            Шипко Вадим 2 курс 8 группа
-        </div>
-    </footer>
-    <script src="script.js"></script>>
+</template>
+
+<div class="news-body"></div>
+<button onclick="showNewsModel.showMore()" class="show-more">Показать ещё</button>
+<footer class="down-pannel">
+    <div style="float: left; display: inline-block;margin-left: 20px">
+        vadimshipko@gmail.com
+    </div>
+    <div style="display: inline-block">
+        News
+    </div>
+    <div style="float: right; display: inline-block;margin-right: 20px">
+        Шипко Вадим 2 курс 8 группа
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
